@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: monappyas-clusterip
+spec:
+  type: ClusterIP
+  selector:
+    app: monappyas
+  ports:
+    - port: 80
+      targetPort: 80
