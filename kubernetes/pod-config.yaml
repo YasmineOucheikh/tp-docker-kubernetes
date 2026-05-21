@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: monappyas-config-pod
+spec:
+  containers:
+    - name: monappyas
+      image: nginx
+      envFrom:
+        - configMapRef:
+            name: monappyas-config
+        - secretRef:
+            name: monappyas-secret

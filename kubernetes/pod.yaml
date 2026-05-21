@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: monappyas-pod
+  labels:
+    app: monappyas
+spec:
+  containers:
+    - name: monappyas
+      image: nginx
+      ports:
+        - containerPort: 80
